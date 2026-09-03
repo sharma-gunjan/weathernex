@@ -14,6 +14,75 @@ st.set_page_config(
     page_icon="🌦️",
     layout="wide"
 )
+# ---------------- WEBSITE STYLING ----------------
+
+st.markdown("""
+<style>
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1400px;
+}
+
+h1 {
+    font-size: 42px !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 28px !important;
+}
+
+h3 {
+    font-size: 22px !important;
+}
+
+[data-testid="stMetric"] {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(128,128,128,0.25);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 28px;
+}
+
+div[data-testid="stVerticalBlock"] > div {
+    gap: 0.7rem;
+}
+
+</style>
+""", unsafe_allow_html=True)
+# ---------------- SIDEBAR ----------------
+
+with st.sidebar:
+
+    st.markdown("## 🌦️ WeatherNex")
+
+    st.caption("National Weather Intelligence Platform")
+
+    st.divider()
+
+    st.markdown("### 📊 Dashboard")
+    st.markdown("Live weather & AI insights")
+
+    st.markdown("### 🌧️ Forecast")
+    st.markdown("5-day weather forecast")
+
+    st.markdown("### ⚠️ Risk Analysis")
+    st.markdown("Rainfall & weather risk")
+
+    st.markdown("### 🗺️ Risk Map")
+    st.markdown("Regional risk visualization")
+
+    st.markdown("### 🚨 Early Warning")
+    st.markdown("Weather alerts & warnings")
+
+    st.divider()
+
+    st.caption("WeatherNex Prototype")
+    st.caption("AI • Data • Risk Intelligence")
 # ---------------- HEADER ----------------
 
 st.title("🌦️ WeatherNex")
@@ -198,7 +267,11 @@ forecast_df = pd.DataFrame({
 
 st.divider()
 
-st.subheader("🌐 Live Weather Intelligence")
+st.subheader("🌤️ Live Weather")
+
+st.caption(
+    f"Real-time weather conditions for {location}"
+)
 
 col1, col2, col3, col4 = st.columns(4)
 

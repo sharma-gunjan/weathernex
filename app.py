@@ -313,7 +313,7 @@ with col4:
 # =========================================================
 
 df = pd.read_csv(
-    "data/weather.csv"
+    "weather.csv"
 )
 
 df["date"] = pd.to_datetime(
